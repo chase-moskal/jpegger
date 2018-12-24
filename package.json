@@ -11,12 +11,25 @@
 	"scripts": {
 		"test": "exit 0"
 	},
-	"keywords": [],
+	"keywords": [
+		"batch",
+		"jpeg",
+		"convert",
+		"resize"
+	],
 	"dependencies": {
 		"commander": "2.19.0",
 		"fast-glob": "2.2.4",
 		"jimp": "0.6.0",
 		"sharp": "0.21.1",
 		"shelljs": "0.8.3"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chase-moskal/jpegger.git"
+	},
+	"bugs": {
+		"url": "https://github.com/chase-moskal/jpegger/issues"
+	},
+	"homepage": "https://github.com/chase-moskal/jpegger#readme"
 }
