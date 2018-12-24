@@ -1,0 +1,14 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "install",
+			"type": "shell",
+			"command": "npm install --silent",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
