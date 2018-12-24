@@ -4,8 +4,7 @@ const sharp = require("sharp")
 const shell = require("shelljs")
 const glob = require("fast-glob")
 const commander = require("commander")
-
-const {dieOnError} = require("./die-on-error")
+const {dieOnError} = require("die-on-error")
 
 dieOnError()
 main()
