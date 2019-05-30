@@ -1,6 +1,6 @@
 {
 	"name": "jpegger",
-	"version": "0.0.0-dev.1",
+	"version": "0.0.0",
 	"description": "cli to batch convert jpegs",
 	"author": "Chase Moskal <chasemoskal@gmail.com>",
 	"license": "ISC",
@@ -21,11 +21,11 @@
 		"resize"
 	],
 	"dependencies": {
-		"commander": "2.19.0",
+		"commander": "2.20.0",
 		"die-on-error": "0.0.0-dev.0",
-		"fast-glob": "2.2.4",
-		"jimp": "0.6.0",
-		"sharp": "0.21.1",
+		"fast-glob": "2.2.7",
+		"jimp": "0.6.4",
+		"sharp": "0.22.1",
 		"shelljs": "0.8.3"
 	},
 	"repository": {
