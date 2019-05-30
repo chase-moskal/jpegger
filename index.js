@@ -21,7 +21,7 @@ async function main() {
 		.option("-i, --indir [globs]", "input directory containing images")
 		.option("-o, --outdir [dir]", "output directory")
 		.option("-q, --quality [number]", "jpeg quality", 75)
-		.option("-s, --size [number]", "maximum width and height", 800)
+		.option("-s, --size [number]", "maximum width and height", null)
 		.parse(process.argv)
 
 	//
@@ -48,8 +48,9 @@ async function main() {
 		const inputParse = path.parse(inputImage)
 		const outPath = path.resolve(outdir, inputParse.dir, inputParse.name + ".jpg")
 		shell.mkdir("-p", path.parse(outPath).dir)
-		await sharp(path.resolve(indir, inputImage))
-			.resize({width: size, height: size, fit: "outside"})
+		let s = await sharp(path.resolve(indir, inputImage))
+		if (size !== null) s = s.resize({width: size, height: size, fit: "inside", withoutEnlargement: true})
+		s
 			.jpeg({quality, progressive: true})
 			.toFile(outPath)
 	}))
