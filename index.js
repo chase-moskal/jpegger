@@ -49,7 +49,7 @@ async function main() {
 		const outPath = path.resolve(outdir, inputParse.dir, inputParse.name + ".jpg")
 		shell.mkdir("-p", path.parse(outPath).dir)
 		await sharp(path.resolve(indir, inputImage))
-			.resize({width: size, height: size, fit: "inside"})
+			.resize({width: size, height: size, fit: "outside"})
 			.jpeg({quality, progressive: true})
 			.toFile(outPath)
 	}))
