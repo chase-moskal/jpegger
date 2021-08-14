@@ -49,6 +49,7 @@ async function main() {
 		const outPath = path.resolve(outdir, inputParse.dir, inputParse.name + ".jpg")
 		shell.mkdir("-p", path.parse(outPath).dir)
 		let s = await sharp(path.resolve(indir, inputImage))
+		s = s.rotate()
 		if (size !== null) s = s.resize({width: size, height: size, fit: "inside", withoutEnlargement: true})
 		s
 			.jpeg({quality, progressive: true})

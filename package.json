@@ -21,10 +21,10 @@
 		"resize"
 	],
 	"dependencies": {
-		"commander": "^6.2.1",
-		"die-on-error": "0.0.0-dev.0",
-		"fast-glob": "^3.2.4",
-		"sharp": "^0.27.0",
+		"commander": "^8.1.0",
+		"die-on-error": "^0.0.0-dev.0",
+		"fast-glob": "^3.2.7",
+		"sharp": "^0.28.3",
 		"shelljs": "^0.8.4"
 	},
 	"repository": {
